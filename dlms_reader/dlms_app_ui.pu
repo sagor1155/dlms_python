@@ -1,0 +1,81 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'dlms_app_ui.ui'
+#
+# Created by: PyQt5 UI code generator 5.10.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(889, 653)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.tab)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.pushButton_connect = QtWidgets.QPushButton(self.tab)
+        self.pushButton_connect.setObjectName("pushButton_connect")
+        self.verticalLayout.addWidget(self.pushButton_connect)
+        self.pushButton_disconnect = QtWidgets.QPushButton(self.tab)
+        self.pushButton_disconnect.setObjectName("pushButton_disconnect")
+        self.verticalLayout.addWidget(self.pushButton_disconnect)
+        self.textBrowser = QtWidgets.QTextBrowser(self.tab)
+        self.textBrowser.setStyleSheet("background-color: rgb(0, 0, 0);\n"
+"color: rgb(238, 238, 236);")
+        self.textBrowser.setObjectName("textBrowser")
+        self.verticalLayout.addWidget(self.textBrowser)
+        self.verticalLayout_3.addLayout(self.verticalLayout)
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.tabWidget.addTab(self.tab_2, "")
+        self.verticalLayout_2.addWidget(self.tabWidget)
+        self.pushButton_read = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_read.setObjectName("pushButton_read")
+        self.verticalLayout_2.addWidget(self.pushButton_read)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 889, 22))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        self.menuExit = QtWidgets.QMenu(self.menubar)
+        self.menuExit.setObjectName("menuExit")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        self.actionExit.setObjectName("actionExit")
+        self.menuExit.addAction(self.actionExit)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuExit.menuAction())
+
+        self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(1)
+        self.actionExit.triggered['bool'].connect(MainWindow.close)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.pushButton_connect.setText(_translate("MainWindow", "Connect"))
+        self.pushButton_disconnect.setText(_translate("MainWindow", "Disconnect"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Tab 1"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))
+        self.pushButton_read.setText(_translate("MainWindow", "PushButton"))
+        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.menuExit.setTitle(_translate("MainWindow", "Exit"))
+        self.actionExit.setText(_translate("MainWindow", "Exit"))
+

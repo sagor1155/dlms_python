@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'dlms_app_ui.ui'
+#
+# Created by: PyQt5 UI code generator 5.10.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(915, 742)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab_1 = QtWidgets.QWidget()
+        self.tab_1.setObjectName("tab_1")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.tab_1)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.pushButton_connect = QtWidgets.QPushButton(self.tab_1)
+        self.pushButton_connect.setObjectName("pushButton_connect")
+        self.horizontalLayout_2.addWidget(self.pushButton_connect)
+        self.pushButton_disconnect = QtWidgets.QPushButton(self.tab_1)
+        self.pushButton_disconnect.setObjectName("pushButton_disconnect")
+        self.horizontalLayout_2.addWidget(self.pushButton_disconnect)
+        self.pushButton_read_selected = QtWidgets.QPushButton(self.tab_1)
+        self.pushButton_read_selected.setObjectName("pushButton_read_selected")
+        self.horizontalLayout_2.addWidget(self.pushButton_read_selected)
+        self.verticalLayout_4.addLayout(self.horizontalLayout_2)
+        self.splitter = QtWidgets.QSplitter(self.tab_1)
+        self.splitter.setOrientation(QtCore.Qt.Vertical)
+        self.splitter.setObjectName("splitter")
+        self.treeWidget = QtWidgets.QTreeWidget(self.splitter)
+        self.treeWidget.setObjectName("treeWidget")
+        self.treeWidget.headerItem().setTextAlignment(0, QtCore.Qt.AlignJustify|QtCore.Qt.AlignVCenter)
+        self.treeWidget.headerItem().setBackground(0, QtGui.QColor(114, 159, 207))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        self.treeWidget.headerItem().setForeground(0, brush)
+        self.treeWidget.headerItem().setBackground(1, QtGui.QColor(114, 159, 207))
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        self.treeWidget.headerItem().setForeground(1, brush)
+        self.textBrowser = QtWidgets.QTextBrowser(self.splitter)
+        self.textBrowser.setMinimumSize(QtCore.QSize(0, 200))
+        self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 400))
+        self.textBrowser.setStyleSheet("background-color: rgb(0, 0, 0);\n"
+"color: rgb(238, 238, 236);")
+        self.textBrowser.setObjectName("textBrowser")
+        self.verticalLayout_4.addWidget(self.splitter)
+        self.tabWidget.addTab(self.tab_1, "")
+        self.verticalLayout_2.addWidget(self.tabWidget)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 915, 22))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        self.menuExit = QtWidgets.QMenu(self.menubar)
+        self.menuExit.setObjectName("menuExit")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        self.actionExit.setObjectName("actionExit")
+        self.menuExit.addAction(self.actionExit)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuExit.menuAction())
+
+        self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(0)
+        self.actionExit.triggered['bool'].connect(MainWindow.close)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.pushButton_connect.setText(_translate("MainWindow", "connect"))
+        self.pushButton_disconnect.setText(_translate("MainWindow", "disconnect"))
+        self.pushButton_read_selected.setText(_translate("MainWindow", "read selected"))
+        self.treeWidget.headerItem().setText(0, _translate("MainWindow", "logical name"))
+        self.treeWidget.headerItem().setText(1, _translate("MainWindow", "description"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_1), _translate("MainWindow", "Tab 1"))
+        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.menuExit.setTitle(_translate("MainWindow", "Exit"))
+        self.actionExit.setText(_translate("MainWindow", "Exit"))
+
